@@ -29,7 +29,7 @@ const state = {
             id: 1,
             title: 'Sunset Beach Cleanup',
             date: '2025-12-08',
-            time: '09:00 AM',
+            time: '09:00',
             location: 'Sunset Beach, CA',
             description: 'Join 40+ volunteers for a 3-hour beach cleanup. All supplies provided!',
             participants: 42,
@@ -39,7 +39,7 @@ const state = {
             id: 2,
             title: 'Marina Bay Restoration',
             date: '2025-12-12',
-            time: '04:00 PM',
+            time: '16:00',
             location: 'Marina Bay, SF',
             description: 'Evening cleanup focused on marine habitat restoration.',
             participants: 18,
@@ -49,7 +49,7 @@ const state = {
             id: 3,
             title: 'Coral Cove Summer Initiative',
             date: '2025-12-15',
-            time: '10:00 AM',
+            time: '10:00',
             location: 'Coral Cove, HI',
             description: 'Quarterly reef-safe cleanup with educational talks from marine biologists.',
             participants: 65,
@@ -133,27 +133,27 @@ async function fetchWeatherData() {
             resolve([
                 {
                     location: 'Sunset Beach, CA',
-                    temp: 72,
+                    temp: 22,
                     condition: 'Sunny',
                     icon: '☀️',
                     humidity: 65,
-                    windSpeed: 12,
+                    windSpeed: 19,
                 },
                 {
                     location: 'Marina Bay, SF',
-                    temp: 62,
+                    temp: 17,
                     condition: 'Cloudy',
                     icon: '☁️',
                     humidity: 75,
-                    windSpeed: 8,
+                    windSpeed: 13,
                 },
                 {
                     location: 'Coral Cove, HI',
-                    temp: 82,
+                    temp: 28,
                     condition: 'Partly Cloudy',
                     icon: '⛅',
                     humidity: 70,
-                    windSpeed: 15,
+                    windSpeed: 24,
                 },
             ]);
         }, 800);
@@ -171,9 +171,9 @@ function renderWeatherCards(weatherData) {
         <div class="weather-card" role="article">
             <h3 aria-label="Location: ${weather.location}">${weather.location}</h3>
             <p style="font-size: 2.5rem; margin: 0.5rem 0;">${weather.icon}</p>
-            <p><strong>${weather.temp}°F</strong> - ${weather.condition}</p>
+            <p><strong>${weather.temp}°C</strong> - ${weather.condition}</p>
             <p style="font-size: 0.9rem; margin-top: 0.5rem;">
-                💧 ${weather.humidity}% | 💨 ${weather.windSpeed} mph
+                💧 ${weather.humidity}% | 💨 ${weather.windSpeed} km/h
             </p>
         </div>
     `).join('');
@@ -191,7 +191,7 @@ function updateCrewStats() {
     
     document.getElementById('crew-members').textContent = crewMembers.length;
     document.getElementById('cleanups-attended').textContent = cleanups;
-    document.getElementById('trash-collected').textContent = `${trashCollected} lbs`;
+    document.getElementById('trash-collected').textContent = `${Math.round(trashCollected * 0.453592)} kg`;
     
     renderCrewMembers(crewMembers);
 }
