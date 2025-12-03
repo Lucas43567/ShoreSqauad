@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ShoreSquad - Rally your crew, track weather, and hit the next beach cleanup. A dope map app for eco-action with your friends.">
+    <meta name="theme-color" content="#00A8E8">
+    <title>ShoreSquad - Beach Cleanup Made Social</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Navigation Header -->
+    <header class="navbar">
+        <div class="navbar-container">
+            <div class="logo">
+                <h1>🌊 ShoreSquad</h1>
+            </div>
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="#map" class="nav-link">Map</a></li>
+                    <li><a href="#cleanups" class="nav-link">Cleanups</a></li>
+                    <li><a href="#weather" class="nav-link">Weather</a></li>
+                    <li><a href="#crew" class="nav-link">My Crew</a></li>
+                </ul>
+            </nav>
+            <button class="mobile-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Rally Your Crew</h2>
+            <p>Track weather, plan beach cleanups, and make eco-action fun with your squad.</p>
+            <button class="cta-button">Start a Cleanup</button>
+            <button class="cta-button secondary">Browse Nearby Events</button>
+        </div>
+        <div class="hero-visual">
+            <div class="wave-animation"></div>
+        </div>
+    </section>
+
+    <!-- Main Content Container -->
+    <main class="container">
+        <!-- Map Section -->
+        <section id="map" class="section map-section">
+            <h2>Interactive Beach Map</h2>
+            <div class="map-container">
+                <div id="map-placeholder" class="map-placeholder">
+                    <p>🗺️ Interactive map will load here</p>
+                    <p class="text-muted">Showing nearby beaches and cleanup events</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Weather Widget -->
+        <section id="weather" class="section weather-section">
+            <h2>Weather Forecast</h2>
+            <div class="weather-grid" id="weather-container">
+                <div class="weather-card loading">
+                    <p>📍 Loading your local weather...</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Upcoming Cleanups -->
+        <section id="cleanups" class="section cleanups-section">
+            <h2>Upcoming Cleanups</h2>
+            <div class="cleanup-list" id="cleanups-container">
+                <article class="cleanup-card">
+                    <div class="cleanup-header">
+                        <h3>Sunset Beach Cleanup</h3>
+                        <span class="badge badge-popular">Popular</span>
+                    </div>
+                    <p class="cleanup-date">📅 Saturday, Dec 8 • 9:00 AM</p>
+                    <p class="cleanup-location">📍 Sunset Beach, CA</p>
+                    <p class="cleanup-description">Join 40+ volunteers for a 3-hour beach cleanup. All supplies provided!</p>
+                    <div class="cleanup-footer">
+                        <div class="participants">
+                            <span class="avatar">👤</span>
+                            <span class="participant-count">42 joining</span>
+                        </div>
+                        <button class="join-btn" aria-label="Join this cleanup">Join Crew</button>
+                    </div>
+                </article>
+
+                <article class="cleanup-card">
+                    <div class="cleanup-header">
+                        <h3>Marina Bay Restoration</h3>
+                        <span class="badge badge-new">New</span>
+                    </div>
+                    <p class="cleanup-date">📅 Wednesday, Dec 12 • 4:00 PM</p>
+                    <p class="cleanup-location">📍 Marina Bay, SF</p>
+                    <p class="cleanup-description">Evening cleanup focused on marine habitat restoration.</p>
+                    <div class="cleanup-footer">
+                        <div class="participants">
+                            <span class="avatar">👤</span>
+                            <span class="participant-count">18 joining</span>
+                        </div>
+                        <button class="join-btn" aria-label="Join this cleanup">Join Crew</button>
+                    </div>
+                </article>
+
+                <article class="cleanup-card">
+                    <div class="cleanup-header">
+                        <h3>Coral Cove Summer Initiative</h3>
+                    </div>
+                    <p class="cleanup-date">📅 Sunday, Dec 15 • 10:00 AM</p>
+                    <p class="cleanup-location">📍 Coral Cove, HI</p>
+                    <p class="cleanup-description">Quarterly reef-safe cleanup with educational talks from marine biologists.</p>
+                    <div class="cleanup-footer">
+                        <div class="participants">
+                            <span class="avatar">👤</span>
+                            <span class="participant-count">65 joining</span>
+                        </div>
+                        <button class="join-btn" aria-label="Join this cleanup">Join Crew</button>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- My Crew Section -->
+        <section id="crew" class="section crew-section">
+            <h2>Your Crew</h2>
+            <div class="crew-container">
+                <div class="crew-stats">
+                    <div class="stat-card">
+                        <h3 id="crew-members">8</h3>
+                        <p>Crew Members</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3 id="cleanups-attended">12</h3>
+                        <p>Cleanups Attended</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3 id="trash-collected">450 lbs</h3>
+                        <p>Trash Collected</p>
+                    </div>
+                </div>
+                <div class="crew-members">
+                    <h3>Recent Members</h3>
+                    <div id="members-list" class="members-list">
+                        <div class="member-badge">Alex</div>
+                        <div class="member-badge">Jordan</div>
+                        <div class="member-badge">Casey</div>
+                        <div class="member-badge">Morgan</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>ShoreSquad</h4>
+                <p>Making beach cleanup social, fun, and impactful.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#privacy">Privacy</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Connect</h4>
+                <ul>
+                    <li><a href="#instagram">Instagram</a></li>
+                    <li><a href="#twitter">Twitter</a></li>
+                    <li><a href="#discord">Discord</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 ShoreSquad. Making waves for ocean health. 🌊</p>
+        </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+</html>

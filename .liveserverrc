@@ -1,0 +1,17 @@
+{
+  "host": "localhost",
+  "port": 5500,
+  "root": "./",
+  "file": "index.html",
+  "wait": 1000,
+  "mount": [],
+  "showURL": true,
+  "ignorePattern": "node_modules|.git",
+  "https": false,
+  "proxy": {
+    "enable": false,
+    "baseUri": "",
+    "proxyUri": ""
+  },
+  "browser": []
+}

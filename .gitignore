@@ -1,0 +1,49 @@
+# Dependencies
+node_modules/
+npm-debug.log
+package-lock.json
+yarn.lock
+
+# IDE & Editor Files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# OS Files
+.DS_Store
+.AppleDouble
+.LSOverride
+.Windows
+
+# Environment Variables
+.env
+.env.local
+.env.*.local
+
+# Build & Distribution
+dist/
+build/
+out/
+
+# Logs
+logs/
+*.log
+
+# Temporary Files
+.tmp/
+temp/
+
+# Testing
+coverage/
+.nyc_output/
+
+# IDE Specific
+*.sublime-project
+*.sublime-workspace
+
+# Live Server
+.vscode-live-server-preview
